@@ -45,7 +45,7 @@ secure_chat/
      - `/peers` — lista os peers com chave já trocada.
      - `/quit` — encerra o cliente.
 
-## Segurança: o que acontece "por baixo do capô"
+## Segurança: o que acontece de verdade
 
 1. **Cadastro/Login (`auth.py`)** — a senha nunca é armazenada. No cadastro,
    geramos um `salt` aleatório de 16 bytes e calculamos
@@ -81,7 +81,7 @@ secure_chat/
   TCP em si também deveria ser protegida (ex.: TLS) e senhas deveriam
   trafegar apenas sobre um canal já autenticado/cifrado.
 - O servidor guarda usuários em um arquivo `users.json` (criado
-  automaticamente na primeira execução) — suficiente para fins de
+  automaticamente na primeira execução), suficiente para fins de
   demonstração, mas não é um banco de produção.
 - Todas as primitivas criptográficas vêm da biblioteca `cryptography`
   (auditada); nenhum algoritmo foi implementado do zero, conforme pedido
