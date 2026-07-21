@@ -15,7 +15,6 @@ secure_chat/
 ├── auth.py           # cadastro/login com hash de senha (nunca texto claro)
 ├── database.py       # persistência simples em JSON (salt + hash)
 ├── requirements.txt
-└── README.md
 ```
 
 ## Como executar
